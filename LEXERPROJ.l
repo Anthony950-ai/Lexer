@@ -20,10 +20,10 @@ delim       [ \t\n]
 NUMBER         {digit}+(\.{digit}+)?(E[+\-]?(digit)+)?
 STRING      {quote}([^\"]|(\"))+{quote}
 ws          {delim}+
-
+//recognition of different tokens analyzed in the language
 %%
 
-//recognition of different tokens analyzed in the language
+
 "/*"    				{
 							int c;
 							while((c = input()) != 0) {
